@@ -1,316 +1,486 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Café, Consciência e Filosofia</title>
-  <style>
-    /* Resetando margens e padding */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instituto Teológico Mosheh — Teologia e Filosofia com profundidade</title>
+<meta name="description" content="Cursos de Teologia, Exegese Bíblica e Filosofia com o Prof. Moisés Gomes da Silva, autor de 13 livros. Comece com um curso gratuito.">
+<meta property="og:title" content="Instituto Teológico Mosheh">
+<meta property="og:description" content="Estude as grandes perguntas com profundidade e método. Comece com um curso gratuito.">
+<link rel="icon" href="https://institutomosheh.com.br/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Frank+Ruhl+Libre:wght@500;700&family=Public+Sans:wght@400;500;600;700&display=swap">
 
-    /* Corpo da página com fundo de imagem de água e cores ajustadas */
-    body {
-      font-family: Arial, sans-serif;
-      background: url('https://gestaoludika.com.br/wp-content/uploads/2019/08/Mentorias-Gest%C3%A3o-da-Aplicabilidade-da-Intelig%C3%AAncia-Emocional-%E2%80%93-Vis%C3%A3o-da-%C3%81guia-Pr%C3%A1tica-1.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
+<!-- META PIXEL: cole aqui o código do Pixel do Gerenciador de Eventos da Meta.
+     O formulário já dispara o evento "Lead" automaticamente quando o Pixel existir. -->
 
-    /* Cabeçalho com imagem de águia e texto dourado */
-    header {
-      background-color: rgba(0, 0, 0, 0.8);
-      text-align: center;
-      padding: 30px 0;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-    }
+<style>
+:root{
+  --navy:#0A1628;--navy2:#122040;--line-d:#24365A;--gold:#C9A84C;--gold-ink:#7F5716;
+  --cream:#F3EDE2;--paper:#FBF8F2;--sand:#EAE2D3;--line:#DDD3C2;
+  --ink:#0A1628;--text:#4A443C;--text2:#3A352E;--muted-d:#B8C0D0;--muted-d2:#8C96AA;
+  --serif:'Cormorant Garamond',Georgia,serif;--sans:'Public Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:var(--gold-ink)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;margin:0;line-height:1.05}
+p{margin:0}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink)}
+.dark .kicker{color:var(--gold)}
+.lead{font-size:18px;line-height:1.65;color:var(--text)}
+.dark{background:var(--navy);color:var(--cream)}
+.dark .lead{color:var(--muted-d)}
+section{padding:96px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;border:0;cursor:pointer;font-family:var(--sans)}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:#E2C06A}
+.btn-line{border:1.5px solid var(--navy);color:var(--navy)}
+.btn-line:hover{background:var(--navy);color:#fff}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy2)}
 
-    h1 {
-      font-size: 3rem;
-      color: #ffd700; /* Dourado */
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
+/* header */
+.top{border-bottom:1px solid var(--line);background:var(--cream);position:sticky;top:0;z-index:10}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.mark{width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Frank Ruhl Libre',serif;font-weight:700;font-size:22px;flex-shrink:0}
+.brand span{font-family:var(--serif);font-size:24px;font-weight:700}
+.nav{display:flex;align-items:center;gap:28px;font-size:15px;font-weight:500}
+.nav a{color:var(--ink);text-decoration:none}
+.nav a:hover{color:var(--gold-ink)}
+.nav .btn{min-height:46px;padding:0 22px;font-size:15px}
 
-    .eagle-icon {
-      width: 60px;
-      height: auto;
-      margin-bottom: 20px;
-    }
+/* hero */
+.hero{padding:80px 0 96px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.hero h1{font-size:clamp(44px,6vw,76px);line-height:1.02;margin:22px 0 24px}
+.hero .lead{font-size:20px;max-width:560px}
+.ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.proof{display:flex;gap:10px 28px;flex-wrap:wrap;margin-top:28px;font-size:15px;color:var(--text)}
+.proof strong{color:var(--ink)}
+.verse{background:var(--navy);color:var(--cream);border-radius:28px;padding:48px;display:flex;flex-direction:column;justify-content:space-between;min-height:520px}
+.verse .heb{font-family:'Frank Ruhl Libre',serif;font-size:clamp(120px,15vw,210px);line-height:.9;color:var(--gold);text-align:right}
+.verse .rule{width:48px;height:2px;background:var(--gold);margin-bottom:16px}
+.verse blockquote{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(24px,2.6vw,33px);line-height:1.25}
+.verse cite{display:block;margin-top:14px;font-style:normal;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
 
-    /* Barra de navegação */
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 15px 0;
-    }
+/* dores */
+.dores h2{font-size:clamp(34px,4vw,52px);max-width:900px;margin-bottom:48px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.dor{border-top:1px solid var(--line-d);padding-top:24px}
+.dor .num{font-family:var(--serif);font-size:40px;color:var(--gold)}
+.dor h3{font-family:var(--sans);font-size:19px;font-weight:600;margin:10px 0}
+.dor p{font-size:16px;line-height:1.6;color:var(--muted-d)}
 
-    nav a {
-      color: #ffd700;
-      text-decoration: none;
-      font-size: 1.2rem;
-      margin: 0 20px;
-      text-transform: uppercase;
-    }
+/* cursos */
+.head2{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:40px}
+.head2 h2{font-size:clamp(36px,4.5vw,56px);margin-top:14px;max-width:700px}
+.head2 .lead{max-width:420px}
+.featured{display:grid;grid-template-columns:1.5fr 1fr;border-radius:28px;overflow:hidden;border:1px solid var(--line);margin-bottom:24px}
+.featured .info{background:var(--paper);padding:44px;display:flex;flex-direction:column;gap:18px}
+.featured h3{font-size:clamp(30px,3.4vw,44px);line-height:1.08}
+.tag{background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 12px;border-radius:999px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.chip{text-decoration:none;color:var(--navy);border:1px solid #B9AB93;padding:10px 16px;border-radius:999px;font-size:14px;font-weight:600}
+.chip:hover{border-color:var(--navy)}
+.featured .buy{background:var(--navy);color:var(--cream);padding:44px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.price{font-family:var(--serif);font-weight:700;line-height:1}
+.featured .price{font-size:72px}
+.small-d{font-size:15px;color:var(--muted-d)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:30px;display:flex;flex-direction:column;gap:12px}
+.card h3{font-size:30px;font-weight:700;line-height:1.1}
+.card .by{font-size:15px;color:var(--text)}
+.card ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:15px;line-height:1.45;color:var(--text2)}
+.card .foot{margin-top:auto;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px}
+.card .price{font-size:30px}
+.card .btn{min-height:46px;padding:0 22px;font-size:15px}
 
-    nav a:hover {
-      color: #2563eb; /* Azul */
-    }
+/* como */
+.como{background:var(--sand)}
+.como h2{font-size:clamp(34px,4vw,52px);margin-bottom:44px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.step .n{width:52px;height:52px;border-radius:50%;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:26px;font-weight:700}
+.step h3{font-family:var(--sans);font-size:19px;font-weight:600;margin:14px 0 8px}
+.step p{font-size:16px;line-height:1.55;color:var(--text)}
 
-    /* Conteúdo principal */
-    .content {
-      max-width: 900px;
-      margin: 40px auto;
-      background-color: rgba(0, 0, 0, 0.7); /* Fundo preto translúcido */
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-    }
+/* professores */
+.intro2{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:48px}
+.intro2 h2{font-size:clamp(34px,4.5vw,56px);margin-top:14px}
+.prof{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:34px;display:flex;flex-direction:column;gap:16px}
+.prof .who{display:flex;align-items:center;gap:16px}
+.av{width:64px;height:64px;border-radius:50%;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:26px;font-weight:700;flex-shrink:0}
+.prof h3{font-size:27px;font-weight:700;line-height:1.1}
+.prof .role{font-size:14px;font-weight:600;color:var(--gold-ink);margin-top:4px}
+.prof p{font-size:16px;line-height:1.6;color:var(--text2)}
+.prof ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.45;color:var(--text)}
+.prof a{margin-top:auto;font-weight:600;font-size:15px}
 
-    .content h2 {
-      font-size: 2rem;
-      color: #ffd700; /* Dourado */
-      margin-bottom: 20px;
-    }
+/* obras */
+.obras{background:var(--sand)}
+.obras .wrap{display:grid;grid-template-columns:1fr 1.5fr;gap:64px;align-items:center}
+.obras h2{font-size:clamp(34px,4.5vw,56px);margin:14px 0 20px}
+.books{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start}
+.book{text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:12px}
+.cover{aspect-ratio:2/3;background:var(--navy);border-radius:6px 14px 14px 6px;border-left:10px solid var(--navy2);padding:22px 18px;display:flex;flex-direction:column;justify-content:space-between}
+.cover .r{width:36px;height:2px;background:var(--gold)}
+.cover .t{font-family:var(--serif);font-size:clamp(18px,2vw,26px);font-weight:700;line-height:1.1;color:var(--cream)}
+.cover .a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.book .l{font-size:14px;font-weight:600;color:var(--gold-ink)}
+.more{aspect-ratio:2/3;border:1.5px dashed #9E8E72;border-radius:6px 14px 14px 6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.more b{font-family:var(--serif);font-size:60px;color:var(--navy);line-height:1}
+.more span{font-size:14px;color:var(--text)}
 
-    .content p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
+/* mentoria */
+.ment{background:var(--navy);color:var(--cream);border-radius:28px;padding:60px;display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:center}
+.ment h2{font-size:clamp(34px,4.6vw,60px);line-height:1.02;margin:18px 0 20px}
+.ment .box{background:var(--navy2);border:1px solid var(--line-d);border-radius:22px;padding:34px;display:flex;flex-direction:column;gap:18px}
+.ment ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:12px;font-size:17px;line-height:1.5;color:#D5DBE6}
+.ment .note{font-size:14px;color:var(--muted-d2)}
+.garantia{display:flex;align-items:center;gap:18px;margin-top:24px;padding:22px 28px;border-radius:18px;border:1px solid var(--line);font-size:16px;line-height:1.5;color:var(--text2)}
+.garantia svg{flex-shrink:0}
 
-    label {
-      font-size: 1rem;
-      color: #ffd700; /* Dourado */
-    }
+/* lead */
+.leadsec .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.leadsec h2{font-size:clamp(38px,4.6vw,56px);margin:14px 0 20px}
+.form{background:var(--navy2);border:1px solid var(--line-d);border-radius:24px;padding:38px;display:flex;flex-direction:column;gap:16px}
+.form label{font-size:14px;font-weight:600;display:block;margin-bottom:8px}
+.form input,.form select{width:100%;height:52px;padding:0 16px;border-radius:12px;border:1px solid #2A3D63;background:var(--navy);color:var(--cream);font-size:16px;font-family:var(--sans)}
+.form input::placeholder{color:#7C879C}
+.form .btn{width:100%;min-height:56px}
+.form .fine{font-size:13px;color:var(--muted-d2);text-align:center}
+.err{font-size:14px;color:#F2B8A0;min-height:1em}
+.ok{text-align:center;padding:24px 0;display:flex;flex-direction:column;gap:12px;align-items:center}
+.ok h3{font-size:40px;color:var(--gold)}
+.ok p{font-size:17px;line-height:1.6;color:#D5DBE6}
+.ok a{color:var(--gold);font-weight:600}
 
-    input, textarea {
-      width: 100%;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      border: 2px solid #ffd700;
-      background-color: rgba(255, 255, 255, 0.1);
-      color: #fff;
-    }
+/* faq */
+.faq .wrap{display:grid;grid-template-columns:380px 1fr;gap:72px}
+.faq h2{font-size:clamp(34px,4vw,52px)}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;min-height:64px;padding:18px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:18px;font-weight:600}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';font-size:24px;color:var(--gold-ink)}
+details[open] summary::after{content:'–'}
+details p{padding:0 0 20px;font-size:16px;line-height:1.6;color:var(--text);max-width:720px}
 
-    select {
-      width: 100%;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      border: 2px solid #ffd700;
-      background-color: rgba(255, 255, 255, 0.1);
-      color: #fff;
-    }
+/* footer */
+footer{padding:88px 0 40px}
+footer .cta{display:flex;justify-content:space-between;align-items:center;gap:40px;margin-bottom:56px}
+footer h2{font-size:clamp(34px,4.6vw,56px);max-width:760px}
+footer .bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line-d);padding-top:26px;font-size:14px;color:var(--muted-d2)}
+footer .bottom a{color:var(--gold)}
 
-    button {
-      padding: 12px 25px;
-      background-color: #1e3a8a; /* Azul */
-      color: #fff;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
+.wa-float{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:20;width:58px;height:58px;border-radius:50%;background:#1F8F4E;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.25)}
 
-    button:hover {
-      background-color: #2563eb; /* Azul mais claro */
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.8);
-      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.8);
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      color: #fff;
-    }
-
-    /* Posts organizados por categoria */
-    .category {
-      margin-top: 30px;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.7);
-      border-radius: 10px;
-    }
-
-    .category h3 {
-      color: #ffd700; /* Dourado */
-      margin-bottom: 10px;
-    }
-
-    .post {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .post h3 {
-      color: #ffd700; /* Dourado */
-    }
-
-    .post p {
-      color: #fff;
-    }
-
-    .delete-btn {
-      background-color: #e11d48; /* Vermelho para deletar */
-      color: #fff;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-
-    .delete-btn:hover {
-      background-color: #be123c; /* Vermelho escuro */
-    }
-
-    /* Responsividade */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      .content {
-        padding: 20px;
-      }
-
-      nav {
-        flex-direction: column;
-      }
-
-      nav a {
-        margin: 10px 0;
-      }
-    }
-  </style>
+/* responsivo */
+@media (max-width:980px){
+  section{padding:64px 0}
+  .nav a:not(.btn){display:none}
+  .hero{padding:48px 0 64px}
+  .hero .wrap,.featured,.intro2,.obras .wrap,.ment,.leadsec .wrap,.faq .wrap{grid-template-columns:1fr;gap:36px}
+  .verse{min-height:0;padding:32px;gap:24px}
+  .grid3{grid-template-columns:1fr;gap:24px}
+  .grid4{grid-template-columns:1fr 1fr;gap:28px}
+  .head2,footer .cta{flex-direction:column;align-items:flex-start;gap:20px}
+  .ment{padding:32px}
+  .featured .info,.featured .buy{padding:28px}
+}
+@media (max-width:560px){
+  .brand span{font-size:18px}
+  .grid4{grid-template-columns:1fr}
+  .books{grid-template-columns:1fr 1fr}
+  .books .book:last-child{display:none}
+  .ctas .btn{width:100%}
+  .form{padding:26px}
+  .featured .price{font-size:56px}
+}
+</style>
 </head>
 <body>
 
-  <!-- Cabeçalho com imagem de águia -->
-  <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Eagle_logo.svg" alt="Águia" class="eagle-icon">
-    <h1>Café, Consciência e Filosofia - O Canto ☕🧠</h1>
-  </header>
-
-  <!-- Barra de navegação -->
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Sobre</a>
-    <a href="#">Contatos</a>
-  </nav>
-
-  <!-- Conteúdo principal -->
-  <div class="content">
-    <h2>Compartilhe seus pensamentos!</h2>
-    <form id="postForm">
-      <label for="title">Título:</label><br>
-      <input type="text" id="title" name="title" required><br><br>
-
-      <label for="content">Conteúdo:</label><br>
-      <textarea id="content" name="content" rows="4" required></textarea><br><br>
-
-      <label for="category">Categoria:</label><br>
-      <select id="category" name="category" required>
-        <option value="Filosofia">Filosofia</option>
-        <option value="Reflexões">Reflexões</option>
-        <option value="Desabafo">Desabafo</option>
-      </select><br><br>
-
-      <button type="submit">Publicar</button>
-    </form>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><span class="mark" aria-hidden="true">מ</span><span>Instituto Teológico Mosheh</span></a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#cursos">Cursos</a>
+      <a href="#mentoria">Mentoria</a>
+      <a href="#professores">Professores</a>
+      <a href="#faq">Dúvidas</a>
+      <a class="btn btn-gold" href="#gratis">Começar grátis</a>
+    </nav>
   </div>
+</header>
 
-  <!-- Container para posts organizados por categoria -->
-  <div class="content" id="postsContainer">
-    <h2>Reflexões Publicadas</h2>
-    <p id="noPostsMessage">Nenhuma reflexão publicada ainda. Seja o primeiro!</p>
+<main id="inicio">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Ensino, pesquisa e ciência</div>
+      <h1>Estude as grandes perguntas com profundidade e método.</h1>
+      <p class="lead">Cursos do fundamento ao nível de mestrado, com professores pesquisadores e autores, para quem quer entender as Escrituras, a tradição e o pensamento que formou o Ocidente. No seu ritmo, sem superficialidade.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="#gratis">Começar com um curso grátis</a>
+        <a class="btn btn-line" href="#cursos">Ver cursos</a>
+      </div>
+      <div class="proof">
+        <span><strong>500+</strong> alunos formados</span>
+        <span><strong>13</strong> livros publicados pelo fundador</span>
+        <span>Professores no Brasil e em Portugal</span>
+      </div>
+    </div>
+    <div class="verse">
+      <div class="heb" aria-hidden="true">משה</div>
+      <div>
+        <div class="rule"></div>
+        <blockquote>“O princípio da sabedoria é: adquire a sabedoria; sim, com tudo o que possuis, adquire o entendimento.”</blockquote>
+        <cite>Provérbios 4:7</cite>
+      </div>
+    </div>
   </div>
+</section>
 
-  <!-- Rodapé -->
-  <footer>
-    <p>&copy; 2025 Café, Consciência e Filosofia. Todos os direitos reservados.</p>
-  </footer>
+<section class="dark dores">
+  <div class="wrap">
+    <h2>Você quer ir além do superficial, mas…</h2>
+    <div class="grid3">
+      <div class="dor"><div class="num">I.</div><h3>Lê, mas sente que falta contexto</h3><p>Texto, língua original, história e tradição mudam o sentido do que você lê — e ninguém te mostrou isso com calma.</p></div>
+      <div class="dor"><div class="num">II.</div><h3>Encontra conteúdo solto e contraditório</h3><p>Vídeos avulsos e cortes de internet dão opinião, não formação. Falta um caminho com começo, meio e fim.</p></div>
+      <div class="dor"><div class="num">III.</div><h3>Não sabe por onde começar</h3><p>Teologia, filosofia, história… O volume assusta. Você precisa de ordem, não de mais informação.</p></div>
+    </div>
+  </div>
+</section>
 
-  <script>
-    const postForm = document.getElementById('postForm');
-    const postsContainer = document.getElementById('postsContainer');
-    const noPostsMessage = document.getElementById('noPostsMessage');
+<section id="cursos">
+  <div class="wrap">
+    <div class="head2">
+      <div><div class="kicker">Catálogo</div><h2>Escolha por onde começar.</h2></div>
+      <p class="lead">Videoaulas com professores do Instituto. Você compra o curso, acessa em Meus Cursos e estuda no seu ritmo.</p>
+    </div>
 
-    postForm.addEventListener('submit', (e) => {
-      e.preventDefault();
+    <div class="featured">
+      <div class="info">
+        <div class="row"><span class="tag">Destaque</span><span style="font-size:15px;color:var(--text)">Prof. Moisés Silva</span></div>
+        <h3>Extensão do Mestrado em Exegese Bíblica da UEG</h3>
+        <p class="lead" style="font-size:17px">Uma formação em 5 módulos, com conteúdo de nível de mestrado, para ler o texto bíblico com o rigor de quem pesquisa. Comece pelo Módulo 1 e avance no seu tempo.</p>
+        <div class="row">
+          <a class="chip" href="https://institutomosheh.com.br/checkout.php?curso=1">Módulo 1</a>
+          <a class="chip" href="https://institutomosheh.com.br/checkout.php?curso=2">Módulo 2</a>
+          <a class="chip" href="https://institutomosheh.com.br/checkout.php?curso=3">Módulo 3</a>
+          <a class="chip" href="https://institutomosheh.com.br/checkout.php?curso=4">Módulo 4</a>
+          <a class="chip" href="https://institutomosheh.com.br/checkout.php?curso=5">Módulo 5</a>
+        </div>
+      </div>
+      <div class="buy">
+        <div class="kicker">Investimento por módulo</div>
+        <div class="price">R$ 100</div>
+        <div class="small-d">5 módulos · R$ 500 a formação completa</div>
+        <a class="btn btn-gold" href="https://institutomosheh.com.br/checkout.php?curso=1" style="margin-top:8px">Começar pelo Módulo 1</a>
+      </div>
+    </div>
 
-      const title = document.getElementById('title').value;
-      const content = document.getElementById('content').value;
-      const category = document.getElementById('category').value;
+    <div class="grid3">
+      <article class="card">
+        <div class="kicker">Filosofia</div>
+        <h3>Introdução à Filosofia de Platão</h3>
+        <div class="by">Prof. Moisés Silva</div>
+        <ul><li>Videoaulas com o professor</li><li>Acesso pela área Meus Cursos</li></ul>
+        <div class="foot"><div class="price">R$ 100</div><a class="btn btn-navy" href="https://institutomosheh.com.br/checkout.php?curso=11">Comprar</a></div>
+      </article>
+      <article class="card">
+        <div class="kicker">Filosofia</div>
+        <h3>Introdução à Filosofia de Hegel</h3>
+        <div class="by">Prof. Moisés Silva</div>
+        <ul><li>Videoaulas com o professor</li><li>Acesso pela área Meus Cursos</li></ul>
+        <div class="foot"><div class="price">R$ 100</div><a class="btn btn-navy" href="https://institutomosheh.com.br/checkout.php?curso=10">Comprar</a></div>
+      </article>
+      <article class="card">
+        <div class="kicker">Formação profissional</div>
+        <h3>Análise de Perfil Comportamental</h3>
+        <div class="by">Prof. Amós Nicodemos</div>
+        <ul><li>8 módulos com videoaulas e material</li><li>Acesso por 1 ano e grupo VIP</li><li>Mentoria para iniciar atendimentos</li><li>Certificado de conclusão</li></ul>
+        <div class="foot"><div class="price">10x R$ 97</div><a class="btn btn-navy" href="https://institutomosheh.com.br/checkout.php?curso=12">Comprar</a></div>
+      </article>
+    </div>
+  </div>
+</section>
 
-      const newPost = {
-        title,
-        content,
-        category,
-        date: new Date().toLocaleDateString(),
-      };
+<section class="como">
+  <div class="wrap">
+    <h2>Como funciona</h2>
+    <div class="grid4">
+      <div class="step"><div class="n">1</div><h3>Escolha seu curso</h3><p>Clique em Comprar e finalize com segurança pelo site do Instituto.</p></div>
+      <div class="step"><div class="n">2</div><h3>Acesse em Meus Cursos</h3><p>Entre com seu login e assista pelo celular ou computador.</p></div>
+      <div class="step"><div class="n">3</div><h3>Estude no seu ritmo</h3><p>Videoaulas e material de apoio, do básico ao avançado.</p></div>
+      <div class="step"><div class="n">4</div><h3>Tire suas dúvidas</h3><p>Fale com a equipe pelo WhatsApp sempre que precisar.</p></div>
+    </div>
+  </div>
+</section>
 
-      let posts = JSON.parse(localStorage.getItem('posts')) || [];
-      posts.unshift(newPost);
-      localStorage.setItem('posts', JSON.stringify(posts));
+<section id="professores">
+  <div class="wrap">
+    <div class="intro2">
+      <div><div class="kicker">Quem ensina</div><h2>Professores que pesquisam, escrevem e ensinam — no Brasil e em Portugal.</h2></div>
+      <p class="lead">Tudo começou em 2019, com as aulas particulares de um jovem teólogo. Hoje o Instituto reúne cursos, mentorias, consultorias e orientação de trabalhos acadêmicos, sempre com atendimento personalizado.</p>
+    </div>
+    <div class="grid3">
+      <article class="prof">
+        <div class="who"><div class="av" aria-hidden="true">MS</div><div><h3>Moisés Gomes da Silva</h3><div class="role">Fundador e Presidente</div></div></div>
+        <p>Teólogo, professor e pesquisador. Autor de 13 livros solo publicados e de 2 antologias.</p>
+        <ul><li>Mestre em Exegese Bíblica (Faculdade Genesis, 2023)</li><li>Pós-graduado em Docência em Teologia e Filosofia e em Teologia Sistemática</li><li>Membro de academias de letras no Brasil e em Portugal</li></ul>
+        <a href="https://lattes.cnpq.br/9504165672023130" target="_blank" rel="noopener">Ver Currículo Lattes</a>
+      </article>
+      <article class="prof">
+        <div class="who"><div class="av" aria-hidden="true">FE</div><div><h3>Pastor Ferreth Alves Euclides</h3><div class="role">Professor de Teologia</div></div></div>
+        <p>Pastor da Assembleia de Deus há 11 anos em Portugal. Leciona Escatologia e Hebraico Bíblico na Academia Logos, em Roterdã.</p>
+        <ul><li>Hebraico Bíblico pelo Instituto de Israel</li><li>Hebraico Moderno pelo método Ulpan</li><li>Escatologia Avançada (Instituto Iktus) e Capelania (Instituto Richter)</li></ul>
+      </article>
+      <article class="prof">
+        <div class="who"><div class="av" aria-hidden="true">AN</div><div><h3>Amós Nicodemos</h3><div class="role">Sócio Diretor de Tecnologia e Professor</div></div></div>
+        <p>Educador e consultor de tecnologia, professor na área comportamental e responsável pela estrutura digital do Instituto.</p>
+        <ul><li>Técnico master em eletrônica e telecomunicações</li><li>Professor do curso Análise de Perfil Comportamental</li><li>Atua em projetos sociais e ensino teológico</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
 
-      displayPosts();
-      postForm.reset();
-    });
+<section class="obras" id="obras">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Obras do fundador</div>
+      <h2>Você aprende com quem escreve sobre o que ensina.</h2>
+      <p class="lead" style="margin-bottom:24px">Moisés Gomes da Silva tem 14 obras publicadas na Amazon, da filosofia do ser à história da inteligência artificial — os mesmos temas que conduz nas aulas e na Mentoria.</p>
+      <a class="btn btn-line" href="https://institutomosheh.com.br/loja.php">Ver todas as obras</a>
+    </div>
+    <div class="books">
+      <a class="book" href="https://www.amazon.com.br/dp/B0F5MSH4LW" target="_blank" rel="noopener">
+        <div class="cover"><div class="r"></div><div class="t">Fenomenoespíritosofia do Ser</div><div class="a">Moisés Gomes da Silva</div></div>
+        <span class="l">Comprar na Amazon</span>
+      </a>
+      <a class="book" href="https://www.amazon.com/dp/B0HG643YJL" target="_blank" rel="noopener">
+        <div class="cover"><div class="r"></div><div class="t">História da Inteligência Artificial</div><div class="a">Moisés Gomes da Silva</div></div>
+        <span class="l">Lançamento · Comprar na Amazon</span>
+      </a>
+      <a class="book" href="https://institutomosheh.com.br/loja.php">
+        <div class="more"><b>+12</b><span>obras na loja</span></div>
+        <span class="l">Ir para a loja</span>
+      </a>
+    </div>
+  </div>
+</section>
 
-    function displayPosts() {
-      const posts = JSON.parse(localStorage.getItem('posts')) || [];
-      postsContainer.innerHTML = '<h2>Reflexões Publicadas</h2>';
+<section id="mentoria">
+  <div class="wrap">
+    <div class="ment">
+      <div>
+        <div class="kicker">Acompanhamento pessoal por 1 ano</div>
+        <h2>Mentoria Individual com o Prof. Moisés Silva</h2>
+        <p class="lead">Um percurso guiado pelos textos que formaram o pensamento: da Bíblia e Homero a Platão, Aristóteles, Agostinho e Tomás de Aquino; de Descartes, Pascal e Kant a Hegel, Marx e as questões da inteligência artificial.</p>
+      </div>
+      <div class="box">
+        <ul><li>Orientação individual do professor</li><li>Acesso ao conteúdo por 1 ano</li><li>Grupo VIP no WhatsApp</li></ul>
+        <div class="note">Vagas limitadas. Valor informado no atendimento.</div>
+        <a class="btn btn-gold" href="https://institutomosheh.com.br/formulario.php">Solicitar minha mentoria</a>
+      </div>
+    </div>
+    <div class="garantia">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#7F5716" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+      <div><strong>Compra segura com 7 dias de garantia.</strong> Comprou e não era o que esperava? Você pede o reembolso integral dentro de 7 dias.</div>
+    </div>
+  </div>
+</section>
 
-      if (posts.length === 0) {
-        postsContainer.innerHTML += '<p id="noPostsMessage">Nenhuma reflexão publicada ainda. Seja o primeiro!</p>';
-        return;
-      }
+<section class="dark leadsec" id="gratis">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Cursos gratuitos</div>
+      <h2>Comece de graça.</h2>
+      <p class="lead">Deixe seu contato e receba o acesso aos cursos gratuitos do Instituto. Conheça o método e os professores antes de investir — e receba em primeira mão a Revista do Instituto Mosheh, que está em produção.</p>
+    </div>
+    <div class="form" id="formbox">
+      <form id="leadform" novalidate>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div><label for="nome">Nome</label><input id="nome" name="nome" type="text" autocomplete="name" placeholder="Seu nome" required></div>
+          <div><label for="whats">WhatsApp</label><input id="whats" name="whats" type="tel" autocomplete="tel" inputmode="tel" placeholder="(81) 90000-0000" required></div>
+          <div><label for="tema">O que mais te interessa?</label>
+            <select id="tema" name="tema"><option>Teologia</option><option>Exegese Bíblica</option><option>Filosofia</option><option>Perfil Comportamental</option><option>Mentoria</option></select></div>
+          <div class="err" id="err" role="alert"></div>
+          <button class="btn btn-gold" type="submit">Quero acessar grátis</button>
+          <div class="fine">Você será levado ao WhatsApp do Instituto para confirmar. Nada de spam.</div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
 
-      const categories = ["Filosofia", "Reflexões", "Desabafo"];
-      categories.forEach((category) => {
-        const categoryPosts = posts.filter(post => post.category === category);
-        if (categoryPosts.length > 0) {
-          postsContainer.innerHTML += `
-            <div class="category">
-              <h3>${category}</h3>
-              ${categoryPosts.map(post => `
-                <div class="post">
-                  <h3>${post.title}</h3>
-                  <p><em>${post.date}</em></p>
-                  <p>${post.content}</p>
-                  <button class="delete-btn" onclick="deletePost('${post.title}')">Excluir</button>
-                </div>
-              `).join('')}
-            </div>
-          `;
-        }
-      });
+<section class="faq" id="faq">
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <div>
+      <details open><summary>Preciso ter formação em teologia ou filosofia?</summary><p>Não. Os cursos introdutórios partem do zero, e quem já estuda encontra nível de mestrado na Exegese Bíblica.</p></details>
+      <details><summary>Como são as aulas?</summary><p>Videoaulas com material de apoio, acessadas pela área Meus Cursos, no celular ou computador.</p></details>
+      <details><summary>Por quanto tempo tenho acesso?</summary><p>Na Mentoria e em Análise de Perfil Comportamental, 1 ano. Para os demais cursos, fale com a gente no WhatsApp.</p></details>
+      <details><summary>Recebo certificado?</summary><p>Análise de Perfil Comportamental inclui certificado de conclusão. Para os demais cursos, consulte a equipe pelo WhatsApp.</p></details>
+      <details><summary>Tem curso gratuito?</summary><p>Sim. Deixe seu contato na seção “Comece de graça” e receba o acesso.</p></details>
+      <details><summary>Qual é a linha teológica do instituto?</summary><p>As aulas apresentam as diferentes correntes com imparcialidade. Em Escatologia, por exemplo, você estuda as visões pré-tribulacionista, pós-tribulacionista, historicista e preterista, e tira suas próprias conclusões.</p></details>
+      <details><summary>E se eu não gostar?</summary><p>Compras pela internet têm 7 dias de arrependimento: você pede o reembolso integral dentro desse prazo.</p></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="dark">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Comece hoje. O primeiro curso é gratuito.</h2>
+      <a class="btn btn-gold" href="#gratis">Começar grátis</a>
+    </div>
+    <div class="bottom">
+      <span>© Instituto Teológico de Ensino e Pesquisa Científica Mosheh</span>
+      <span><a href="https://wa.me/5567992686667">WhatsApp (67) 99268-6667</a> · <a href="https://www.youtube.com/@Mois%C3%A9sSilvaPOESIASEPOEMAS" target="_blank" rel="noopener">YouTube</a> · <a href="https://institutomosheh.com.br/contato.php">Contato</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5567992686667?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20cursos." aria-label="Falar no WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.7-4.6A8.5 8.5 0 1 1 8 19.6L3 21z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8c-1-.4-1.9-1.3-2.3-2.3l.8-1-1-2L9 9.5z"/></svg>
+</a>
+
+<script>
+(function(){
+  var WHATS = '5567992686667';
+  var form = document.getElementById('leadform');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var nome = document.getElementById('nome').value.trim();
+    var whats = document.getElementById('whats').value.trim();
+    var tema = document.getElementById('tema').value;
+    var err = document.getElementById('err');
+    if(!nome || whats.replace(/\D/g,'').length < 8){
+      err.textContent = 'Preencha seu nome e um WhatsApp com DDD para receber o acesso.';
+      return;
     }
-
-    function deletePost(title) {
-      let posts = JSON.parse(localStorage.getItem('posts')) || [];
-      posts = posts.filter(post => post.title !== title);
-      localStorage.setItem('posts', JSON.stringify(posts));
-
-      displayPosts();
-    }
-
-    // Carregar posts ao inicializar
-    displayPosts();
-  </script>
+    err.textContent = '';
+    if (typeof window.fbq === 'function') { window.fbq('track', 'Lead', {content_name: tema}); }
+    if (typeof window.gtag === 'function') { window.gtag('event', 'generate_lead', {tema: tema}); }
+    var msg = 'Olá! Sou ' + nome + ' e quero acessar os cursos gratuitos do Instituto Mosheh. Meu interesse: ' + tema + '. Meu WhatsApp: ' + whats + '.';
+    var url = 'https://wa.me/' + WHATS + '?text=' + encodeURIComponent(msg);
+    document.getElementById('formbox').innerHTML =
+      '<div class="ok"><h3>Pronto!</h3><p>Abrimos o WhatsApp do Instituto com sua mensagem. É só tocar em enviar para receber o acesso.</p>' +
+      '<a class="btn btn-gold" href="' + url + '" target="_blank" rel="noopener">Abrir WhatsApp de novo</a>' +
+      '<a href="https://institutomosheh.com.br/cursosgratis.php">Ver os cursos gratuitos no site</a></div>';
+    window.open(url, '_blank');
+  });
+})();
+</script>
 </body>
 </html>
